@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Dn3-r9-rDT">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="rXC-Sa-NhO">
+            <objects>
+                <viewController id="Dn3-r9-rDT" customClass="ViewController" customModule="Study_Moya" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="em2-7I-3iw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PaPaGo 농담 번역기" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zoe-tv-A5T">
+                                <rect key="frame" x="100" y="64" width="214" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Rzv-ep-weE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eWA-Lg-aIX">
+                                <rect key="frame" x="16" y="812" width="382" height="30"/>
+                                <state key="normal" title="새로운농담"/>
+                                <connections>
+                                    <action selector="reset_Joke:" destination="Dn3-r9-rDT" eventType="touchUpInside" id="4d6-h8-zBL"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="한국어" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vWN-Ao-fxx">
+                                <rect key="frame" x="16" y="466" width="382" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="English" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mUZ-9e-si6">
+                                <rect key="frame" x="16" y="120" width="382" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ehl-1l-Oxv">
+                                <rect key="frame" x="16" y="503" width="382" height="293"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="DC3-YC-8dz">
+                                <rect key="frame" x="16" y="157" width="382" height="293"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Iig-KG-wig"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zoe-tv-A5T" firstAttribute="leading" secondItem="Iig-KG-wig" secondAttribute="leading" constant="100" id="1FX-7K-4j0"/>
+                            <constraint firstItem="Ehl-1l-Oxv" firstAttribute="height" secondItem="DC3-YC-8dz" secondAttribute="height" id="4Ob-We-ceh"/>
+                            <constraint firstItem="zoe-tv-A5T" firstAttribute="top" secondItem="Iig-KG-wig" secondAttribute="top" constant="20" id="4zy-Qu-GnX"/>
+                            <constraint firstItem="Iig-KG-wig" firstAttribute="trailing" secondItem="mUZ-9e-si6" secondAttribute="trailing" constant="16" id="5ii-Zo-aaB"/>
+                            <constraint firstItem="mUZ-9e-si6" firstAttribute="top" secondItem="zoe-tv-A5T" secondAttribute="bottom" constant="16" id="D7R-r9-JaS"/>
+                            <constraint firstItem="vWN-Ao-fxx" firstAttribute="top" secondItem="DC3-YC-8dz" secondAttribute="bottom" constant="16" id="Hx9-af-AEM"/>
+                            <constraint firstItem="eWA-Lg-aIX" firstAttribute="leading" secondItem="Iig-KG-wig" secondAttribute="leading" constant="16" id="Iro-zL-XCc"/>
+                            <constraint firstItem="Iig-KG-wig" firstAttribute="trailing" secondItem="DC3-YC-8dz" secondAttribute="trailing" constant="16" id="RfD-SI-p5W"/>
+                            <constraint firstItem="DC3-YC-8dz" firstAttribute="leading" secondItem="Iig-KG-wig" secondAttribute="leading" constant="16" id="YG3-ef-aDV"/>
+                            <constraint firstItem="DC3-YC-8dz" firstAttribute="top" secondItem="mUZ-9e-si6" secondAttribute="bottom" constant="16" id="bQE-Cv-kiS"/>
+                            <constraint firstItem="Ehl-1l-Oxv" firstAttribute="leading" secondItem="Iig-KG-wig" secondAttribute="leading" constant="16" id="gjr-pC-BXj"/>
+                            <constraint firstItem="Ehl-1l-Oxv" firstAttribute="top" secondItem="vWN-Ao-fxx" secondAttribute="bottom" constant="16" id="ikw-N9-0AX"/>
+                            <constraint firstItem="Iig-KG-wig" firstAttribute="trailing" secondItem="zoe-tv-A5T" secondAttribute="trailing" constant="100" id="imE-KH-gtJ"/>
+                            <constraint firstItem="vWN-Ao-fxx" firstAttribute="leading" secondItem="Iig-KG-wig" secondAttribute="leading" constant="16" id="jiK-8P-m9H"/>
+                            <constraint firstItem="Iig-KG-wig" firstAttribute="trailing" secondItem="vWN-Ao-fxx" secondAttribute="trailing" constant="16" id="m3J-Ym-gxf"/>
+                            <constraint firstItem="Iig-KG-wig" firstAttribute="trailing" secondItem="Ehl-1l-Oxv" secondAttribute="trailing" constant="16" id="nJL-MP-SH1"/>
+                            <constraint firstItem="eWA-Lg-aIX" firstAttribute="top" secondItem="Ehl-1l-Oxv" secondAttribute="bottom" constant="16" id="tAI-fR-s6l"/>
+                            <constraint firstItem="Iig-KG-wig" firstAttribute="bottom" secondItem="eWA-Lg-aIX" secondAttribute="bottom" constant="20" id="w9E-IE-RU5"/>
+                            <constraint firstItem="Iig-KG-wig" firstAttribute="trailing" secondItem="eWA-Lg-aIX" secondAttribute="trailing" constant="16" id="xGa-3r-Wk4"/>
+                            <constraint firstItem="mUZ-9e-si6" firstAttribute="leading" secondItem="Iig-KG-wig" secondAttribute="leading" constant="16" id="xO2-yU-KgP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textAfter" destination="Ehl-1l-Oxv" id="lEm-Fc-LWl"/>
+                        <outlet property="textBefore" destination="DC3-YC-8dz" id="hM3-wW-3Hy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hT9-MU-wfY" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="770" y="76"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
